@@ -1,0 +1,32 @@
+[
+  {
+    "id": "deepseek-v2-001",
+    "query": "What is Multi-head Latent Attention?",
+    "relevant_sources": [
+      {
+        "source": "DeepSeekv2.pdf",
+        "pages": [6, 7, 8]
+      }
+    ]
+  },
+  {
+    "id": "deepseek-v2-002",
+    "query": "How does DeepSeek-V2 reduce KV cache?",
+    "relevant_sources": [
+      {
+        "source": "DeepSeekv2.pdf",
+        "pages": [6, 7, 16]
+      }
+    ]
+  },
+  {
+    "id": "deepseek-v2-003",
+    "query": "How many total parameters does DeepSeek-V2 have?",
+    "relevant_sources": [
+      {
+        "source": "DeepSeekv2.pdf",
+        "pages": [1, 12]
+      }
+    ]
+  }
+]
