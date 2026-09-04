@@ -1,0 +1,428 @@
+{
+  "config": {
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "chunk_size": 500,
+    "chunk_overlap": 100,
+    "retrieval": "dense_bruteforce_cosine"
+  },
+  "metrics": {
+    "hit@1": 0.0,
+    "hit@3": 0.0,
+    "hit@5": 0.0,
+    "hit@10": 0.0,
+    "mrr": 0.0,
+    "evidence_recall@5": 0.0,
+    "evidence_recall@10": 0.0,
+    "all_evidence@5": 0.0,
+    "all_evidence@10": 0.0
+  },
+  "samples": [
+    {
+      "id": "financebench_id_03029",
+      "document": "3M_2018_10K",
+      "question": "What is the FY2018 capital expenditure amount (in USD millions) for 3M? Give a response to the question by relying on the details shown in the cash flow statement.",
+      "gold_pages": [
+        60
+      ],
+      "metrics": {
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "hit@10": 0,
+        "mrr": 0.0,
+        "evidence_recall@5": 0.0,
+        "evidence_recall@10": 0.0,
+        "all_evidence@5": 0,
+        "all_evidence@10": 0
+      },
+      "top_results": [
+        {
+          "rank": 1,
+          "page": 26,
+          "score": 0.7597821950912476,
+          "content": "h, while the U.S. selling prices declined slightly.\n \nFinancial condition:\n \n3M generated $6.4 billion of operating cash flow in 2018, an increase of $199 million when compared to 2017. This followed a decrease of $422 million\nwhen comparing 2017 to 2016. Refer to the section entitled “Financial Condition and Liquidity” later in MD&A for a discussion of items impacting cash\nflows. In November 2018, 3M’s Board of Directors authorized the repurchase of up to $10 billion of 3M’s outstanding common"
+        },
+        {
+          "rank": 2,
+          "page": 51,
+          "score": 0.7429301738739014,
+          "content": "by\nreference to an agreed-upon notional principal amount. The dollar equivalent (based on inception date foreign currency exchange rates) gross notional\namount of the Company’s interest rate swaps at December 31, 2018 was $2.4 billion. Additional details about 3M’s long-term debt can be found in Note\n12, including references to information regarding derivatives and/or hedging instruments, further discussed in Note 14, associated with the Company’s\nlong-term debt.\n \nCommodity Prices Risk:\n \nThe"
+        },
+        {
+          "rank": 3,
+          "page": 51,
+          "score": 0.7363823652267456,
+          "content": "ose rates may affect the Company’s net investment in foreign subsidiaries and may cause fluctuations\nin cash flows related to foreign denominated transactions. 3M is also exposed to the translation of foreign currency earnings to the U.S. dollar. The\nCompany enters into foreign exchange forward and option contracts to hedge against the effect of exchange rate fluctuations on cash flows denominated in\nforeign currencies. These transactions are designated as cash flow hedges. 3M may dedesignate th"
+        },
+        {
+          "rank": 4,
+          "page": 51,
+          "score": 0.7347073554992676,
+          "content": "in\nforeign currencies. These transactions are designated as cash flow hedges. 3M may dedesignate these cash flow hedge relationships in advance of the\noccurrence of the forecasted transaction. The maximum length of time over which 3M hedges its exposure to the variability in future cash flows of the\nforecasted transactions is 36 months. In addition, 3M enters into foreign currency forward contracts that are not designated in hedging relationships to\noffset, in part, the impacts of certain inter"
+        },
+        {
+          "rank": 5,
+          "page": 100,
+          "score": 0.7320190668106079,
+          "content": "maining balance of $7 million (after tax loss) related to forward\nstarting interest rate swaps, which will be amortized over the respective lives of the notes. Based on exchange rates as of December 31, 2018, 3M expects to\nreclassify approximately $55 million and $15 million of the after-tax net unrealized foreign exchange cash flow hedging gains to earnings in 2019 and\n2020, respectively, and approximately $6 million of the after-tax net unrealized foreign exchange cash flow hedging losses to e"
+        },
+        {
+          "rank": 6,
+          "page": 43,
+          "score": 0.728934645652771,
+          "content": "tly has no plans or intentions to repatriate these funds for U.S.\noperations. See Note 10 for further information on earnings considered to be reinvested indefinitely.\n \n3M’s primary short-term liquidity needs are met through cash on hand and U.S. commercial paper issuances. 3M believes it will have continuous access to\nthe commercial paper market. 3M’s commercial paper program permits the Company to have a maximum of $5 billion outstanding with a maximum\nmaturity of 397 days from date of issuan"
+        },
+        {
+          "rank": 7,
+          "page": 26,
+          "score": 0.7281959056854248,
+          "content": "llion contribution to the plan. Additional detail and discussion of\ninternational plan asset returns and discount rates is provided in Note 13 (Pension and Postretirement Benefit Plans).\n \n3M expects to contribute approximately $100 million to $200 million of cash to its global defined benefit pension and postretirement plans in 2019. The\nCompany does not have a required minimum cash pension contribution obligation for its U.S. plans in 2019. 3M expects global defined benefit pension and\npostret"
+        },
+        {
+          "rank": 8,
+          "page": 44,
+          "score": 0.7280727624893188,
+          "content": ", 2018 and 2017.\n \n \n    \nDecember 31,\n \n \n2018 versus\n \n(Millions)\n \n2018\n \n2017\n \n2017\n \nTotal debt\n \n$\n14,622\n \n$\n13,949\n \n$\n673\n \nLess: Cash, cash equivalents and marketable securities\n \n \n3,270\n \n \n4,156\n \n \n(886)\n \nNet debt (non-GAAP measure)\n \n$\n11,352\n \n$\n9,793\n \n$\n1,559\n \n \nRefer to the preceding “Total Debt” and “Cash, Cash Equivalents and Marketable Securities” sections for additional details. \n \nBalance Sheet:\n \n3M’s strong balance sheet and liquidity provide the Company with signifi"
+        },
+        {
+          "rank": 9,
+          "page": 51,
+          "score": 0.7263154983520508,
+          "content": "$2.5\nbillion at December 31, 2018. In addition, as of December 31, 2018, the Company had 4.1 billion Euros in principal amount of foreign currency\ndenominated debt designated as non-derivative hedging instruments in certain net investment hedges as discussed in Note 14 in the “Net Investment\nHedges” section.\n \nInterest Rates Risk:\n \nThe Company may be impacted by interest rate volatility with respect to existing debt and future debt issuances. 3M manages interest rate risk and expense\nusing a mi"
+        },
+        {
+          "rank": 10,
+          "page": 44,
+          "score": 0.7256284952163696,
+          "content": "Table of Contents\n \nCash, Cash Equivalents and Marketable Securities:\n \nAt December 31, 2018, 3M had $3.3 billion of cash, cash equivalents and marketable securities, of which approximately $3.1 billion was held by the\nCompany’s foreign subsidiaries and approximately $160 million was held by the United States. These balances are invested in bank instruments and other\nhigh-quality fixed income securities. At December 31, 2017, cash, cash equivalents and marketable securities held by the Company’s"
+        }
+      ]
+    },
+    {
+      "id": "financebench_id_04672",
+      "document": "3M_2018_10K",
+      "question": "Assume that you are a public equities analyst. Answer the following question by primarily using information that is shown in the balance sheet: what is the year end FY2018 net PPNE for 3M? Answer in USD billions.",
+      "gold_pages": [
+        58
+      ],
+      "metrics": {
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "hit@10": 0,
+        "mrr": 0.0,
+        "evidence_recall@5": 0.0,
+        "evidence_recall@10": 0.0,
+        "all_evidence@5": 0,
+        "all_evidence@10": 0
+      },
+      "top_results": [
+        {
+          "rank": 1,
+          "page": 51,
+          "score": 0.7961190938949585,
+          "content": "by\nreference to an agreed-upon notional principal amount. The dollar equivalent (based on inception date foreign currency exchange rates) gross notional\namount of the Company’s interest rate swaps at December 31, 2018 was $2.4 billion. Additional details about 3M’s long-term debt can be found in Note\n12, including references to information regarding derivatives and/or hedging instruments, further discussed in Note 14, associated with the Company’s\nlong-term debt.\n \nCommodity Prices Risk:\n \nThe"
+        },
+        {
+          "rank": 2,
+          "page": 14,
+          "score": 0.7894783020019531,
+          "content": "Table of Contents\n \nItem 6. \nSelected Financial Dat\n \na.\n \n(Dollars in millions, except per share amounts)\n    \n2018*\n    \n2017\n    \n2016\n    \n2015\n    \n2014\n \nYears ended December 31:\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nNet sales\n \n$\n32,765\n \n$\n31,657\n \n$\n30,109\n \n$\n30,274\n \n$\n31,821\n \nNet income attributable to 3M\n \n \n5,349\n \n \n4,858\n \n \n5,050\n \n \n4,833\n \n \n4,956\n \nPer share of 3M common stock:\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nNet income attributable to 3M — basic\n \n \n9.09\n \n \n8.13\n \n \n8.35\n \n \n7.7"
+        },
+        {
+          "rank": 3,
+          "page": 51,
+          "score": 0.772950291633606,
+          "content": "$2.5\nbillion at December 31, 2018. In addition, as of December 31, 2018, the Company had 4.1 billion Euros in principal amount of foreign currency\ndenominated debt designated as non-derivative hedging instruments in certain net investment hedges as discussed in Note 14 in the “Net Investment\nHedges” section.\n \nInterest Rates Risk:\n \nThe Company may be impacted by interest rate volatility with respect to existing debt and future debt issuances. 3M manages interest rate risk and expense\nusing a mi"
+        },
+        {
+          "rank": 4,
+          "page": 98,
+          "score": 0.7718549966812134,
+          "content": "Level 1\n \nLevel 2\n \nLevel 3\n \nDec. 31,\n \nAsset Class\n    \n2018\n   \n2017\n   \n2018\n   \n2017\n   \n2018\n   \n2017\n   \n2018\n   \n2017\n \nEquities\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \nGrowth equities\n \n$\n460\n \n$\n659\n \n$\n248\n \n$\n289\n \n$\n —\n \n$\n —\n \n$\n708\n \n$\n948\n \nValue equities\n \n \n446\n \n \n597\n \n \n42\n \n \n43\n \n \n —\n \n \n —\n \n \n488\n \n \n640\n \nCore equities\n \n \n55\n \n \n62\n \n \n742\n \n \n790\n \n \n 5\n \n \n 4\n \n \n802\n \n \n856\n \nEquities, valued at net asset value*\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n1"
+        },
+        {
+          "rank": 5,
+          "page": 65,
+          "score": 0.7711896896362305,
+          "content": "for 2016). The computations for basic and diluted earnings per share for the years ended December 31 follow:\n \nEarnings Per Share Computations\n \n(Amounts in millions, except per share amounts)\n    \n2018\n    \n2017\n    \n2016\n \nNumerator:\n \n \n \n \n \n \n \n \n \n \nNet income attributable to 3M\n \n$\n5,349\n \n$\n4,858\n \n$\n5,050\n \n \n \n \n \n \n \n \n \n \n \n \nDenominator:\n \n \n \n \n \n \n \n \n \n \nDenominator for weighted average 3M common shares outstanding \n–\n basic\n \n \n588.5\n \n \n597.5\n \n \n604.7\n \nDilution associated wi"
+        },
+        {
+          "rank": 6,
+          "page": 100,
+          "score": 0.7653043270111084,
+          "content": "maining balance of $7 million (after tax loss) related to forward\nstarting interest rate swaps, which will be amortized over the respective lives of the notes. Based on exchange rates as of December 31, 2018, 3M expects to\nreclassify approximately $55 million and $15 million of the after-tax net unrealized foreign exchange cash flow hedging gains to earnings in 2019 and\n2020, respectively, and approximately $6 million of the after-tax net unrealized foreign exchange cash flow hedging losses to e"
+        },
+        {
+          "rank": 7,
+          "page": 47,
+          "score": 0.7633923292160034,
+          "content": "paper was $435 million at December 31, 2018, as compared to $745\nmillion at December 31, 2017. Net commercial paper issuances and repayments and borrowings by international subsidiaries are largely reflected in\n“Change in short-term debt – net” in the preceding table. 3M’s primary short-term liquidity needs are met through cash on hand and U.S. commercial paper\nissuances.\n \nProceeds from debt for 2018 primarily relate to the September 2018, issuance of $400 million aggregate principal amount of"
+        },
+        {
+          "rank": 8,
+          "page": 100,
+          "score": 0.7616075277328491,
+          "content": "Company entered into additional forward starting interest rate\nswaps with notional amounts of $600 million as hedges against interest rate volatility associated with a forecasted issuance of fixed rate debt. Prior to the\nissuance of medium-term notes in October 2017, 3M terminated these interest rate swaps. The termination resulted in an immaterial loss within\naccumulated other comprehensive income that will be amortized over the respective lives of the debt.\n \nDuring 2018, the \nCompany entered"
+        },
+        {
+          "rank": 9,
+          "page": 47,
+          "score": 0.7597453594207764,
+          "content": "e third quarter\n2018 issuance of $2.25 billion of medium-term notes, which was partially offset by the $450 million third quarter repayment and 500 million Euro fourth\nquarter repayment of maturing medium-term notes, the net impact of repayments and borrowings of international subsidiaries along with foreign currency\neffects, and lower year on year commercial paper balance. Outstanding commercial paper was $435 million at December 31, 2018, as compared to $745\nmillion at December 31, 2017. Net c"
+        },
+        {
+          "rank": 10,
+          "page": 100,
+          "score": 0.7543550729751587,
+          "content": "mprehensive income.\n \n \nIn the first six months of 2016, the Company entered into forward starting interest rate swaps that expired in December 2016 with an aggregate notional\namount of $300 million as a hedge against interest rate volatility associated with a forecasted issuance of fixed rate debt. Upon issuance of medium-term\nnotes in September 2016, 3M terminated these interest rate swaps. The termination resulted in an immaterial loss within accumulated other comprehensive\nincome that will b"
+        }
+      ]
+    },
+    {
+      "id": "financebench_id_00499",
+      "document": "3M_2022_10K",
+      "question": "Is 3M a capital-intensive business based on FY2022 data?",
+      "gold_pages": [
+        48,
+        50,
+        52
+      ],
+      "metrics": {
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "hit@10": 0,
+        "mrr": 0.0,
+        "evidence_recall@5": 0.0,
+        "evidence_recall@10": 0.0,
+        "all_evidence@5": 0,
+        "all_evidence@10": 0
+      },
+      "top_results": [
+        {
+          "rank": 1,
+          "page": 37,
+          "score": 0.7910526990890503,
+          "content": "organic growth and deliver strong returns on invested capital remains the first priority for capital deployment. This includes research and development, capital expenditures, and\ncommercialization capability. The Company also continues to actively manage its portfolio through acquisitions and divestitures to maximize value for shareholders. 3M\nexpects to continue returning cash to shareholders through dividends and share repurchases. To fund cash needs in the United States, the Company relies on"
+        },
+        {
+          "rank": 2,
+          "page": 38,
+          "score": 0.7830482721328735,
+          "content": "ities\n3,916\n4,792\n(876)\nNet debt (non-GAAP measure)\n$\n12,023\n$\n12,571\n$\n(548)\nRefer to the preceding “Total Debt” and “Cash, Cash Equivalents and Marketable Securities” sections for additional details.\nBalance Sheet:\n3M’s strong balance sheet and liquidity provide the Company with significant flexibility to fund its numerous opportunities going forward. The Company will continue to invest\nin its operations to drive growth, including continual review of acquisition opportunities.\nThe Company uses"
+        },
+        {
+          "rank": 3,
+          "page": 37,
+          "score": 0.7800024747848511,
+          "content": "program permits the Company to have a maximum of $5 billion outstanding with a\nmaximum maturity of 397 days from date of issuance. The Company had no commercial paper outstanding at December 31, 2022 and December 31, 2021.\nTotal debt:\nThe strength of 3M’s credit profile and significant ongoing cash flows provide 3M proven access to capital markets. Additionally, the Company’s debt maturity profile is\nstaggered to help ensure refinancing needs in any given year are reasonable in proportion to the"
+        },
+        {
+          "rank": 4,
+          "page": 34,
+          "score": 0.7737389206886292,
+          "content": "uct demand and increasing manufacturing efficiency. 3M is\nincreasing its investment in manufacturing and sourcing capability in order to more closely align its product capability with its sales in major geographic areas in order to best\nserve its customers throughout the world with proprietary, automated, efficient, safe and sustainable processes. Capital spending is discussed in more detail later in MD&A in\nthe section entitled “Cash Flows from Investing Activities.”\nCRITICAL ACCOUNTING ESTIMAT"
+        },
+        {
+          "rank": 5,
+          "page": 37,
+          "score": 0.7730275392532349,
+          "content": "T\nable of \nContents\nFINANCIAL CONDITION AND LIQUIDITY\nThe strength and stability of 3M’s business model and strong free cash flow capability, together with proven capital markets access, provide financial flexibility to deploy\ncapital in accordance with the Company's stated priorities and meet needs associated with contractual commitments and other obligations. Investing in 3M’s business to drive\norganic growth and deliver strong returns on invested capital remains the first priority for capital"
+        },
+        {
+          "rank": 6,
+          "page": 89,
+          "score": 0.7709102630615234,
+          "content": "T\nable of \nContents\n3M had a fixed-to-floating interest rate swap that was terminated in 2007 with respect to the Company's \n30\n-year $\n220\n million principal amount debenture due in 2028. As this\ndebt is still outstanding, its carrying value includes the remaining basis adjustment from this discontinued fair value hedge.\nThe following amounts were recorded on the consolidated balance sheet related to cumulative basis adjustments for active fair value hedges, as well as remaining amounts for\ndis"
+        },
+        {
+          "rank": 7,
+          "page": 38,
+          "score": 0.7704554796218872,
+          "content": "ny defines\nworking capital as current assets minus current liabilities. 3M believes working capital is meaningful to investors as a measure of operational efficiency and short-term financial\nhealth.\nWorking capital decreased $1.2 billion compared with December 31, 2021. Balance changes in current assets decreased working capital by $0.7 billion, driven largely by\ndecreases in cash and cash equivalents. Balance changes in current liabilities decreased working capital by $0.5 billion, primarily du"
+        },
+        {
+          "rank": 8,
+          "page": 37,
+          "score": 0.7679973244667053,
+          "content": "ntentions to repatriate these funds for U.S. operations. See Note 10\nfor further information on earnings considered to be reinvested indefinitely.\n3M maintains a strong liquidity profile. The Company’s primary short-term liquidity needs are met through cash on hand and U.S. commercial paper issuances. 3M believes it\nwill have continuous access to the commercial paper market. 3M’s commercial paper program permits the Company to have a maximum of $5 billion outstanding with a\nmaximum maturity of 3"
+        },
+        {
+          "rank": 9,
+          "page": 42,
+          "score": 0.7665742635726929,
+          "content": "instruments was $2.8 billion at December 31, 2022. In addition, as of December 31, 2022, the\nCompany had €2.4 billion in principal amount of foreign currency denominated debt designated as non-derivative hedging instruments in certain net investment hedges as\ndiscussed in Note 14 in the “Net Investment Hedges” section.\nInterest Rates Risk:\nThe Company may be impacted by interest rate volatility with respect to existing debt and future debt issuances. 3M manages interest rate risk and expense us"
+        },
+        {
+          "rank": 10,
+          "page": 39,
+          "score": 0.7664613723754883,
+          "content": "emand and increasing manufacturing efficiency. The\nCompany expects 2023 capital spending to be approximately $1.5 billion to $1.8 billion as 3M continues to invest in growth, productivity and sustainability.\n3M records capital-related government grants earned as reductions to the cost of property, plant and equipment; and associated unpaid liabilities and grant proceeds receivable\nare considered non-cash changes in such balances for purposes of preparation of statement of cash flows.\n39"
+        }
+      ]
+    },
+    {
+      "id": "financebench_id_01226",
+      "document": "3M_2022_10K",
+      "question": "What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.",
+      "gold_pages": [
+        27
+      ],
+      "metrics": {
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "hit@10": 0,
+        "mrr": 0.0,
+        "evidence_recall@5": 0.0,
+        "evidence_recall@10": 0.0,
+        "all_evidence@5": 0,
+        "all_evidence@10": 0
+      },
+      "top_results": [
+        {
+          "rank": 1,
+          "page": 53,
+          "score": 0.7639070749282837,
+          "content": "easure of segment operating performance used by 3M’s chief operating decision maker—impacting 3M’s\ndisclosed measure of segment profit/loss (business segment operating income). See additional information in Note 19. 3M's disclosed disaggregated revenue was also updated\nas a result of the changes in segment reporting. See additional information in Note 2. Information provided herein reflects the impact of these changes for all periods presented.\nForeign currency translation:\n Local currencies gen"
+        },
+        {
+          "rank": 2,
+          "page": 28,
+          "score": 0.7626357078552246,
+          "content": "lt, 3M’s disclosed\nmeasure of segment profit/loss (business segment operating income) was updated for all comparative periods presented. The change to business segment operating income\naligns with the update to how the CODM assesses performance and allocates resources for the Company’s business segments (see Note 19 for additional details).\nInformation provided herein reflects the impact of these changes for all periods presented. 3M manages its operations in four business segments. The reportab"
+        },
+        {
+          "rank": 3,
+          "page": 121,
+          "score": 0.7537298202514648,
+          "content": "d Unallocated”).\nEffective in the first quarter of 2022, the measure of segment operating performance used by 3M’s chief operating decision maker (CODM) changed and, as a result, 3M’s\ndisclosed measure of segment profit/loss (business segment operating income (loss) ) was updated. The change to business segment operating income aligns with the update to\nhow the CODM assesses performance and allocates resources for the Company’s business segments. The changes included the items described below. T"
+        },
+        {
+          "rank": 4,
+          "page": 121,
+          "score": 0.7502278089523315,
+          "content": "se segments, if operated independently, would report the operating income information shown.\n3M discloses business segment operating income as its measure of segment profit/loss, reconciled to both total 3M operating income and income before taxes. Business segment\noperating income excludes certain expenses and income that are not allocated to business segments (as described below in “Corporate and Unallocated”).\nEffective in the first quarter of 2022, the measure of segment operating performanc"
+        },
+        {
+          "rank": 5,
+          "page": 32,
+          "score": 0.7399184107780457,
+          "content": "c\ndevelopment and manufacturing, rising elective procedure volumes in the first six months of 2021 and due to improving hospital information technology investments.\nDivestitures:\n•\nIn May 2020, 3M completed the sale of substantially all of its drug delivery business.\nBusiness segment operating income margins increased year-on-year due to sales growth leverage and benefits from restructuring actions and lower related charges that were\npartially offset by supply chain disruptions, increases in raw"
+        },
+        {
+          "rank": 6,
+          "page": 89,
+          "score": 0.7393195033073425,
+          "content": "T\nable of \nContents\n3M had a fixed-to-floating interest rate swap that was terminated in 2007 with respect to the Company's \n30\n-year $\n220\n million principal amount debenture due in 2028. As this\ndebt is still outstanding, its carrying value includes the remaining basis adjustment from this discontinued fair value hedge.\nThe following amounts were recorded on the consolidated balance sheet related to cumulative basis adjustments for active fair value hedges, as well as remaining amounts for\ndis"
+        },
+        {
+          "rank": 7,
+          "page": 19,
+          "score": 0.7351338863372803,
+          "content": "ss\n(business segment operating income). See additional information in Note 19. 3M's disclosed disaggregated revenue was also updated as a result of the changes in\nsegment reporting. See additional information in Note 2.\n•\nChanges to non-GAAP measures - certain amounts adjusted for special items. Refer to the \nCertain amounts adjusted for special items - (non-GAAP measures)\n section\nbelow for additional information.\nInformation provided herein reflects the impact of these changes for all periods"
+        },
+        {
+          "rank": 8,
+          "page": 28,
+          "score": 0.7285958528518677,
+          "content": "of which 3M’s effective ownership is 75 percent.\nPERFORMANCE BY BUSINESS SEGMENT\nItem 1, Business Segments, provides an overview of 3M’s business segments. In addition, disclosures relating to 3M’s business segments are provided in Note 19. Effective in\nthe first quarter of 2022, the measure of segment operating performance used by 3M’s chief operating decision maker (CODM) changed and, as a result, 3M’s disclosed\nmeasure of segment profit/loss (business segment operating income) was updated fo"
+        },
+        {
+          "rank": 9,
+          "page": 15,
+          "score": 0.7246145009994507,
+          "content": "and facilitate access to a variety of lenders. The addition of further leverage to\nthe Company’s capital structure could impact 3M’s credit ratings in the future. Failure to maintain strong investment grade ratings would adversely affect the Company’s cost\nof funding and could adversely affect liquidity and access to capital markets.\n* Changes in tax rates, laws, or regulations could adversely impact our financial results.\nThe Company’s business is subject to tax-related external conditions, su"
+        },
+        {
+          "rank": 10,
+          "page": 26,
+          "score": 0.7239483594894409,
+          "content": "itigate a portion of foreign currency risk and reduce volatility, ultimately allowing time for\n3M’s businesses to respond to changes in the marketplace.\nFinancial condition:\nRefer to the section entitled “Financial Condition and Liquidity” later in MD&A for a discussion of items impacting cash flows.\nIn November 2018, 3M’s Board of Directors replaced the Company’s February 2016 repurchase program with a new repurchase program. This new program authorizes the\nrepurchase of up to $10 billion of 3M"
+        }
+      ]
+    },
+    {
+      "id": "financebench_id_01865",
+      "document": "3M_2022_10K",
+      "question": "If we exclude the impact of M&A, which segment has dragged down 3M's overall growth in 2022?",
+      "gold_pages": [
+        25
+      ],
+      "metrics": {
+        "hit@1": 0,
+        "hit@3": 0,
+        "hit@5": 0,
+        "hit@10": 0,
+        "mrr": 0.0,
+        "evidence_recall@5": 0.0,
+        "evidence_recall@10": 0.0,
+        "all_evidence@5": 0,
+        "all_evidence@10": 0
+      },
+      "top_results": [
+        {
+          "rank": 1,
+          "page": 38,
+          "score": 0.7158991694450378,
+          "content": "ties. At\nDecember 31, 2021, 3M had $4.8 billion of cash, cash equivalents and marketable securities, of which approximately $3.1 billion was held by the Company’s foreign\nsubsidiaries and $1.7 billion was held by the United States. The decrease from December 31, 2021 primarily resulted from cash flow from operations and Food Safety\ntransaction-related cash consideration and earlier borrowings (see Note 3) offset by ongoing dividend payments, purchases of treasury stock, capital expenditures, and"
+        },
+        {
+          "rank": 2,
+          "page": 61,
+          "score": 0.7144569158554077,
+          "content": "d synergies expected\nto arise after 3M’s acquisition of these businesses.\n2022 acquisitions:\nThere were \nno\n acquisitions that closed during the year ended December 31, 2022.\n2021 acquisitions:\nThere were \nno\n acquisitions that closed during the year ended December 31, 2021.\n2020 acquisitions:\nThere were \nno\n acquisitions that closed during the year ended December 31, 2020.\nDivestitures:\n3M may divest certain businesses from time to time based upon review of the Company’s portfolio considering,"
+        },
+        {
+          "rank": 3,
+          "page": 19,
+          "score": 0.7140552401542664,
+          "content": "ch updated 3M's 2021 Annual Report on Form 10-K).\nOVERVIEW\n3M is a diversified global manufacturer, technology innovator and marketer of a wide variety of products and services. Effective in the first quarter of 2022, 3M made the\nfollowing changes:\n•\nChanges in measure of segment operating performance used by 3M’s chief operating decision maker—impacting 3M’s disclosed measure of segment profit/loss\n(business segment operating income). See additional information in Note 19. 3M's disclosed disagg"
+        },
+        {
+          "rank": 4,
+          "page": 32,
+          "score": 0.7055010795593262,
+          "content": "c\ndevelopment and manufacturing, rising elective procedure volumes in the first six months of 2021 and due to improving hospital information technology investments.\nDivestitures:\n•\nIn May 2020, 3M completed the sale of substantially all of its drug delivery business.\nBusiness segment operating income margins increased year-on-year due to sales growth leverage and benefits from restructuring actions and lower related charges that were\npartially offset by supply chain disruptions, increases in raw"
+        },
+        {
+          "rank": 5,
+          "page": 34,
+          "score": 0.7008841037750244,
+          "content": "1,723\n \n1,983 \nTotal Company\n92,000\n \n95,000 \n$\n1,749\n \n$\n1,603 \n$\n9,178\n \n$\n9,429 \nEmployment:\nEmployment decreased in 2022 when compared to 2021. The above table includes the impact of acquisitions, net of divestitures and other actions.\nCapital Spending/Net Property, Plant and Equipment:\nInvestments in property, plant and equipment enable growth across many diverse markets, helping to meet product demand and increasing manufacturing efficiency. 3M is\nincreasing its investment in manufacturing"
+        },
+        {
+          "rank": 6,
+          "page": 61,
+          "score": 0.6959416270256042,
+          "content": "nts), gains/losses on business divestitures are reflected in Corporate and Unallocated.\n2022 divestitures and previously announced divestitures:\nIn March 2022, 3M completed the sale of its floor products business in Western Europe, formerly part of the Consumer business, for immaterial proceeds that approximated the\nbusiness's book value.\nIn July 2022, 3M announced its intention to spin off the Health Care business as a separate public company. 3M expects to initially retain an ownership positio"
+        },
+        {
+          "rank": 7,
+          "page": 37,
+          "score": 0.6953979134559631,
+          "content": "is\nstaggered to help ensure refinancing needs in any given year are reasonable in proportion to the total portfolio. As of December 2022, 3M has a credit rating of A1, stable\noutlook from Moody's Investors Service, and a credit rating of A+, CreditWatch negative from S&P Global Ratings.\nThe Company’s total debt was lower at December 31, 2022 when compared to December 31, 2021. Decreases in debt were largely due to the repayments of 500 million euros\nand $600 million aggregate principal amounts"
+        },
+        {
+          "rank": 8,
+          "page": 39,
+          "score": 0.694759726524353,
+          "content": "emand and increasing manufacturing efficiency. The\nCompany expects 2023 capital spending to be approximately $1.5 billion to $1.8 billion as 3M continues to invest in growth, productivity and sustainability.\n3M records capital-related government grants earned as reductions to the cost of property, plant and equipment; and associated unpaid liabilities and grant proceeds receivable\nare considered non-cash changes in such balances for purposes of preparation of statement of cash flows.\n39"
+        },
+        {
+          "rank": 9,
+          "page": 10,
+          "score": 0.6941707134246826,
+          "content": "and has impacted and will continue to impact 3M’s operations, including its supply\nchain and its manufacturing and distribution capabilities. Although COVID-19 increased demand for certain 3M products, it also resulted in decreased demand from certain end\nmarkets, made it more difficult for 3M to serve customers, and resulted in conditions that had the potential to damage 3M's reputation, including third-party price gouging,\ncounterfeiting, and other illegal or fraudulent activities involving 3"
+        },
+        {
+          "rank": 10,
+          "page": 64,
+          "score": 0.6939376592636108,
+          "content": "of 3M's commitment to a plan to exit per- and polyfluoroalkyl substance (PFAS) manufacturing, 3M recorded a charge\nin the fourth quarter of 2022 related to impairment of long-lived assets and an immaterial charge related to impairment of indefinite-lived assets.\nAmortization expense follows:\nYear ended December 31,\n(Millions)\n2022\n2021\n2020\nAmortization expense\n$\n498\n \n$\n529\n \n$\n537\n \nExpected amortization expense for acquired amortizable intangible assets recorded as of December 31, 2022 follo"
+        }
+      ]
+    }
+  ]
+}
