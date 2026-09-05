@@ -15,7 +15,7 @@ def main() -> None:
 
     results = search_papernotes_raw(
         query=query,
-        max_results=10,
+        max_results=5,
     )
 
     print(

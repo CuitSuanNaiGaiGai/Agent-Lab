@@ -1,6 +1,6 @@
 import json
 from urllib.parse import urlparse
-
+import time
 import httpx
 from bs4 import BeautifulSoup
 from langchain.tools import tool
@@ -23,13 +23,37 @@ def read_paper_note_raw(
             "Only PaperNotes URLs are allowed."
         )
 
-    response = httpx.get(
-        url,
-        follow_redirects=True,
-        timeout=30.0,
-    )
+    last_error: Exception | None = None
 
-    response.raise_for_status()
+    for attempt in range(3):
+        try:
+            response = httpx.get(
+                url,
+                follow_redirects=True,
+                timeout=httpx.Timeout(
+                    connect=10.0,
+                    read=45.0,
+                    write=10.0,
+                    pool=10.0,
+                ),
+            )
+
+            response.raise_for_status()
+            break
+
+        except (
+            httpx.TimeoutException,
+            httpx.NetworkError,
+        ) as exc:
+            last_error = exc
+
+            if attempt < 2:
+                time.sleep(1.0)
+                continue
+
+            raise RuntimeError(
+                f"Failed to read paper after 3 attempts: {url}"
+            ) from last_error
 
     soup = BeautifulSoup(
         response.text,
@@ -75,24 +99,39 @@ def read_paper_note_raw(
 
 
 @tool
-def read_paper_note(
-    url: str,
-) -> str:
+def read_paper_note(url: str) -> str:
     """
     Read the detailed PaperNotes content of a specific academic paper.
 
     Use this tool after search_papernotes when you have identified
     a potentially relevant paper and need evidence about its method,
     experiments, findings, limitations, or contributions.
-
-    Args:
-        url: The PaperNotes URL of the paper to read.
     """
 
-    paper = read_paper_note_raw(url)
+    try:
+        paper = read_paper_note_raw(url)
 
-    return json.dumps(
-        paper,
-        ensure_ascii=False,
-        indent=2,
-    )
+        return json.dumps(
+            {
+                "success": True,
+                **paper,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+
+    except Exception as exc:
+        return json.dumps(
+            {
+                "success": False,
+                "url": url,
+                "error": str(exc),
+                "message": (
+                    "Failed to read this paper. "
+                    "You may try another candidate paper "
+                    "or continue with the available evidence."
+                ),
+            },
+            ensure_ascii=False,
+            indent=2,
+        )

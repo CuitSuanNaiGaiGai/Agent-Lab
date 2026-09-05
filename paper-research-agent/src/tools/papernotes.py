@@ -95,11 +95,30 @@ def search_papernotes_raw(
 
         page = browser.new_page()
 
-        page.goto(
-            PAPERNOTES_URL,
-            wait_until="domcontentloaded",
-            timeout=60_000,
-        )
+        last_error: Exception | None = None
+
+        for attempt in range(3):
+            try:
+                page.goto(
+                    PAPERNOTES_URL,
+                    wait_until="domcontentloaded",
+                    timeout=30_000,
+                )
+
+                last_error = None
+                break
+
+            except Exception as exc:
+                last_error = exc
+
+                if attempt < 2:
+                    page.wait_for_timeout(1000)
+                    continue
+
+        if last_error is not None:
+            raise RuntimeError(
+                "Failed to open PaperNotes after 3 attempts."
+            ) from last_error
 
         search_input = page.locator(
             "input.md-search__input:visible"
@@ -124,9 +143,14 @@ def search_papernotes_raw(
         except Exception:
             return []
 
+        candidate_pool_size = max(
+            max_results * 4,
+            20,
+        )
+
         count = min(
             search_items.count(),
-            max_results,
+            candidate_pool_size,
         )
 
         for index in range(count):
@@ -216,8 +240,7 @@ def search_papernotes_raw(
         ],
         reverse=True,
     )
-    return results
-
+    return results[:max_results]
 
 @tool
 def search_papernotes(
@@ -226,35 +249,49 @@ def search_papernotes(
 ) -> str:
     """
     Search PaperNotes for academic papers related to a research topic.
-
-    Use this tool when the user asks about recent academic research,
-    papers, methods, or research trends.
-
-    Args:
-        query: Academic search keywords.
-        max_results: Maximum number of search results to return.
     """
 
-    results = search_papernotes_raw(
-        query=query,
-        max_results=max_results,
-    )
-
-    if not results:
-        return json.dumps(
-            {
-                "query": query,
-                "results": [],
-                "message": "No papers found.",
-            },
-            ensure_ascii=False,
+    try:
+        results = search_papernotes_raw(
+            query=query,
+            max_results=max_results,
         )
 
-    return json.dumps(
-        {
-            "query": query,
-            "results": results,
-        },
-        ensure_ascii=False,
-        indent=2,
-    )
+        if not results:
+            return json.dumps(
+                {
+                    "success": True,
+                    "query": query,
+                    "results": [],
+                    "message": "No papers found.",
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+
+        return json.dumps(
+            {
+                "success": True,
+                "query": query,
+                "results": results,
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+
+    except Exception as exc:
+        return json.dumps(
+            {
+                "success": False,
+                "query": query,
+                "results": [],
+                "error": str(exc),
+                "message": (
+                    "PaperNotes search failed. "
+                    "You may retry with another query "
+                    "or continue using available evidence."
+                ),
+            },
+            ensure_ascii=False,
+            indent=2,
+        )

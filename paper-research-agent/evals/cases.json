@@ -1,0 +1,20 @@
+[
+  {
+    "id": "agent_memory_latest",
+    "query": "LLM Agent Memory 的最新研究",
+    "category": "normal",
+    "expectation": "应该搜索并阅读与 LLM Agent Memory 直接相关的论文"
+  },
+  {
+    "id": "precipitation_downscaling",
+    "query": "降水降尺度的最新研究",
+    "category": "query_understanding",
+    "expectation": "应该识别“降水降尺度”为完整研究主题，而不是认为问题不完整"
+  },
+  {
+    "id": "super_resolution",
+    "query": "super resolution 的最新研究",
+    "category": "low_recall",
+    "expectation": "如果没有直接相关论文，应明确说明检索不足，不应把邻近论文当作直接证据"
+  }
+]
