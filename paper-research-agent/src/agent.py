@@ -23,6 +23,13 @@ SYSTEM_PROMPT = """
 7. 阅读论文后，可以利用相关论文和 Related Work 继续寻找研究线索。
 8. 避免把 Long Context、Attention 等邻近方向直接视为 Agent Memory。
 
+关于 read_paper_note 的严格规则：
+- 只能使用 search_papernotes 返回结果中的原始 url。
+- 必须逐字复制 search_papernotes 返回的 url。
+- 禁止根据论文标题、会议、年份或路径规律自行构造、修改或猜测 URL。
+- 如果某篇论文只出现在 Related Work 中，但尚未通过 search_papernotes 获得其 URL，则不能直接调用 read_paper_note。
+- 如果搜索预算已经耗尽，且没有该论文的搜索结果 URL，则放弃阅读该论文，并明确说明证据不足。
+
 搜索预算有限：
 - 避免重复搜索。
 - 优先利用已有候选和论文线索。

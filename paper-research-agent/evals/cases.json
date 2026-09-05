@@ -3,18 +3,26 @@
     "id": "agent_memory_latest",
     "query": "LLM Agent Memory 的最新研究",
     "category": "normal",
-    "expectation": "应该搜索并阅读与 LLM Agent Memory 直接相关的论文"
+    "expectation": "应该搜索并阅读与 LLM Agent Memory 直接相关的论文",
+    "must_read": [
+      "Unveiling Privacy Risks in LLM Agent Memory"
+    ],
+    "min_read_count": 2
   },
   {
     "id": "precipitation_downscaling",
     "query": "降水降尺度的最新研究",
     "category": "query_understanding",
-    "expectation": "应该识别“降水降尺度”为完整研究主题，而不是认为问题不完整"
+    "expectation": "应该识别“降水降尺度”为完整研究主题，而不是认为问题不完整",
+    "must_read": [],
+    "min_read_count": 0
   },
   {
     "id": "super_resolution",
     "query": "super resolution 的最新研究",
-    "category": "low_recall",
-    "expectation": "如果没有直接相关论文，应明确说明检索不足，不应把邻近论文当作直接证据"
+    "category": "normal",
+    "expectation": "应该检索并阅读与超分辨率直接相关的论文",
+    "must_read": [],
+    "min_read_count": 2
   }
 ]
