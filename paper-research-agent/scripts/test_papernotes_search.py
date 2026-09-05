@@ -1,25 +1,20 @@
-
 from src.tools.papernotes import (
     search_papernotes_raw,
     tokenize_query,
 )
 
-query = "LLM Agent Memory"
-
-print(
-    "Query tokens:",
-    tokenize_query(query),
-)
-print()
-
-results = search_papernotes_raw(
-    query=query,
-    max_results=10,
-)
 
 def main() -> None:
+    query = "LLM Agent Memory"
+
+    print(
+        "Query tokens:",
+        tokenize_query(query),
+    )
+    print()
+
     results = search_papernotes_raw(
-        query="LLM Agent",
+        query=query,
         max_results=10,
     )
 
@@ -37,18 +32,18 @@ def main() -> None:
         print(result["title"])
 
         print(
-            "Score:",
-            result["relevance_score"],
-        )
-
-        print(
             "Matched:",
             result["matched_terms"],
         )
 
         print(
-            "Missing:",
-            result["missing_terms"],
+            "Unmatched:",
+            result["unmatched_terms"],
+        )
+
+        print(
+            "Site Missing:",
+            result["site_missing_terms"],
         )
 
         print("URL:")

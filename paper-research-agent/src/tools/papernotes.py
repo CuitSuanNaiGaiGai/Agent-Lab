@@ -42,46 +42,41 @@ def calculate_relevance(
     query: str,
     title: str,
     keywords: str,
-) -> tuple[float, list[str]]:
+) -> tuple[float, list[str], list[str]]:
     query_terms = tokenize_query(query)
-    print(
-        "[DEBUG relevance]",
-        query,
-        "->",
-        query_terms,
-    )
+
     if not query_terms:
-        return 0.0, []
+        return 0.0, [], []
 
     title_text = title.lower()
     keywords_text = keywords.lower()
 
     matched_terms: list[str] = []
+    unmatched_terms: list[str] = []
 
     score = 0.0
 
     for term in query_terms:
-        matched = False
-
         if term in title_text:
-            # 标题命中权重大
             score += 2.0
-            matched = True
-
-        elif term in keywords_text:
-            # keywords 命中权重较小
-            score += 1.0
-            matched = True
-
-        if matched:
             matched_terms.append(term)
 
-    # 每个 query term 最高可以贡献 2 分
+        elif term in keywords_text:
+            score += 1.0
+            matched_terms.append(term)
+
+        else:
+            unmatched_terms.append(term)
+
     max_score = len(query_terms) * 2.0
 
     normalized_score = score / max_score
 
-    return normalized_score, matched_terms
+    return (
+        normalized_score,
+        matched_terms,
+        unmatched_terms,
+    )
 
 def search_papernotes_raw(
     query: str,
@@ -185,20 +180,28 @@ def search_papernotes_raw(
             else:
                 url = href
 
-            relevance_score, matched_terms = (
-                calculate_relevance(
-                    query=query,
-                    title=title,
-                    keywords=keywords,
-                )
+            (
+                relevance_score,
+                matched_terms,
+                unmatched_terms,
+            ) = calculate_relevance(
+                query=query,
+                title=title,
+                keywords=keywords,
             )
 
             results.append(
                 {
                     "title": title,
                     "keywords": keywords,
-                    "missing_terms": missing_terms,
+
+                    # PaperNotes 自己提供，仅保留用于调试
+                    "site_missing_terms": missing_terms,
+
+                    # 我们自己计算
                     "matched_terms": matched_terms,
+                    "unmatched_terms": unmatched_terms,
+
                     "relevance_score": round(
                         relevance_score,
                         3,
@@ -206,7 +209,6 @@ def search_papernotes_raw(
                     "url": url,
                 }
             )
-
         browser.close()
     results.sort(
         key=lambda item: item[
